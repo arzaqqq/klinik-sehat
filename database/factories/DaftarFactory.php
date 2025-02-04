@@ -2,7 +2,9 @@
 
 namespace Database\Factories;
 
-use App\Models\pasien;
+
+use App\Models\poli;
+use App\Models\Pasien;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -17,8 +19,8 @@ class DaftarFactory extends Factory
      */
     public function definition(): array
     {
-        $idPasien = \App\Models\Pasien::pluck('id')->toArray();
-        $idPoli = \App\Models\Poli::pluck('id')->toArray();
+        $idPasien = Pasien::pluck('id')->toArray();
+        $idPoli = poli::pluck('id')->toArray();
 return [
 'pasien_id' => $this->faker->randomElement($idPasien),
 'tanggal_daftar' => $this->faker->date(),

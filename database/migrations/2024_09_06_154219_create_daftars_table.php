@@ -1,8 +1,8 @@
 <?php
 
-use Illuminate\Database\Migrations\Migration;
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
 
 return new class extends Migration
 {
@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('pasien_id');
             $table->date('tanggal_daftar');
-            $table->foreignId('poli_id'); 
+            $table->foreignId('poli_id');
             $table->text('keluhan');
             $table->text('diagnosis')->nullable();
             $table->text('tindakan')->nullable();
